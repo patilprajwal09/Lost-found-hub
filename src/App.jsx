@@ -1,18 +1,24 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Routes,Route } from 'react-router-dom'
+import Home from './pages/home.jsx';
+import Login from './pages/login.jsx';
+import Register from './pages/register.jsx';
+import Addfounditem from './pages/addFoundItem.jsx';
+import Addlostitem from './pages/addLostItem.jsx';
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+ 
 
   return (
-    <>
-      <div>
-       hii
-      </div>
-      
-    </>
+    <Routes>
+      <Route path="/home" element={<Home/>} />
+      <Route path='/' element={<Login/>} />
+      <Route path='/register' element={<Register/>} />
+      <Route path='/addFoundItem' element={<Addfounditem/>} />
+      <Route path='/addLostItem' element={<Addlostitem/>} />
+     </Routes>
   )
 }
 
